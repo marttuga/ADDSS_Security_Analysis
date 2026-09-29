@@ -1,0 +1,15 @@
+com\example\tutorialws\repository\CommentRepository.class
+com\example\tutorialws\repository\TutorialRepository.class
+com\example\tutorialws\controller\TutorialController.class
+com\example\tutorialws\model\Tutorial.class
+com\example\tutorialws\config\WebFluxConfig.class
+com\example\tutorialws\controller\CommentController.class
+com\example\tutorialws\repository\TagRepository.class
+com\example\tutorialws\exception\ControllerExceptionHandler.class
+com\example\tutorialws\exception\ResourceNotFoundException.class
+com\example\tutorialws\exception\ErrorMessage.class
+com\example\tutorialws\model\Comment.class
+com\example\tutorialws\controller\CommentController$Nif.class
+com\example\tutorialws\controller\TagController.class
+com\example\tutorialws\TutorialWsApplication.class
+com\example\tutorialws\model\Tag.class
