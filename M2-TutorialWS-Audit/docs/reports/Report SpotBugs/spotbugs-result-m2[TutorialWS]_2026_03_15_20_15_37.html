@@ -1,0 +1,315 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta charset="UTF-8"/>
+      <title>SpotBugs Report</title>
+      <style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+		</style>
+   </head>
+   <body>
+      <h1>SpotBugs Report</h1>
+      <p>Produced using <a href="https://spotbugs.github.io">SpotBugs</a>4.8.6.</p>
+      <p>Project: 
+			m2[TutorialWS]</p>
+      <h2>Metrics</h2>
+      <p>338 lines of code analyzed,
+	in 15 classes, 
+	in 6 packages.</p>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Metric</th>
+            <th align="right">Total</th>
+            <th align="right">Density*</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>High Priority Warnings</td>
+            <td align="right"/>
+            <td align="right">NaN</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>Medium Priority Warnings</td>
+            <td align="right">9</td>
+            <td align="right">26.63</td>
+         </tr>
+         <tr class="$totalClass">
+            <td>
+               <b>Total Warnings</b>
+            </td>
+            <td align="right">
+               <b>9</b>
+            </td>
+            <td align="right">
+               <b>26.63</b>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <i>(* Defects per Thousand lines of non-commenting source statements)</i>
+      </p>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>Summary</h2>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Warning Type</th>
+            <th align="right">Number</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+            </td>
+            <td align="right">1</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <a href="#Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+            </td>
+            <td align="right">8</td>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <b>Total</b>
+            </td>
+            <td align="right">
+               <b>9</b>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h1>Warnings</h1>
+      <p>Click on each warning link to see a full description of the issue, and
+	    details of how to resolve it.</p>
+      <h2>
+         <a name="Warnings_CORRECTNESS">Correctness Warnings</a>
+      </h2>
+      <table class="warningtable"
+             width="100%"
+             cellspacing="2"
+             cellpadding="5">
+         <tr class="tableheader">
+            <th align="left">Warning</th>
+            <th align="left">Priority</th>
+            <th align="left">Details</th>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#NP_NULL_ON_SOME_PATH">Possible null pointer dereference</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>Possible null pointer dereference of tag in com.example.tutorialws.model.Tutorial.removeTag(long)<br/>
+                  <br/>
+                  <br/>In file Tutorial.java Tutorial.java,
+					
+						line 72 71<br/>In class com.example.tutorialws.model.Tutorial<br/>In method com.example.tutorialws.model.Tutorial.removeTag(long)<br/>Value loaded from tag<br/>Dereferenced at Tutorial.java:[line 72]<br/>Known null at Tutorial.java:[line 71]</p>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+      </h2>
+      <table class="warningtable"
+             width="100%"
+             cellspacing="2"
+             cellpadding="5">
+         <tr class="tableheader">
+            <th align="left">Warning</th>
+            <th align="left">Priority</th>
+            <th align="left">Details</th>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>com.example.tutorialws.exception.ErrorMessage.getTimestamp() may expose internal representation by returning ErrorMessage.timestamp<br/>
+                  <br/>
+                  <br/>In file ErrorMessage.java ErrorMessage.java,
+					
+						line 23 23<br/>In class com.example.tutorialws.exception.ErrorMessage<br/>In method com.example.tutorialws.exception.ErrorMessage.getTimestamp()<br/>Field com.example.tutorialws.exception.ErrorMessage.timestamp<br/>At ErrorMessage.java:[line 23]<br/>At ErrorMessage.java:[line 23]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>com.example.tutorialws.model.Comment.getTutorial() may expose internal representation by returning Comment.tutorial<br/>
+                  <br/>
+                  <br/>In file Comment.java Comment.java,
+					
+						line 40 40<br/>In class com.example.tutorialws.model.Comment<br/>In method com.example.tutorialws.model.Comment.getTutorial()<br/>Field com.example.tutorialws.model.Comment.tutorial<br/>At Comment.java:[line 40]<br/>At Comment.java:[line 40]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>com.example.tutorialws.model.Tag.getTutorials() may expose internal representation by returning Tag.tutorials<br/>
+                  <br/>
+                  <br/>In file Tag.java Tag.java,
+					
+						line 39 39<br/>In class com.example.tutorialws.model.Tag<br/>In method com.example.tutorialws.model.Tag.getTutorials()<br/>Field com.example.tutorialws.model.Tag.tutorials<br/>At Tag.java:[line 39]<br/>At Tag.java:[line 39]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>com.example.tutorialws.model.Tutorial.getTags() may expose internal representation by returning Tutorial.tags<br/>
+                  <br/>
+                  <br/>In file Tutorial.java Tutorial.java,
+					
+						line 76 76<br/>In class com.example.tutorialws.model.Tutorial<br/>In method com.example.tutorialws.model.Tutorial.getTags()<br/>Field com.example.tutorialws.model.Tutorial.tags<br/>At Tutorial.java:[line 76]<br/>At Tutorial.java:[line 76]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>new com.example.tutorialws.exception.ErrorMessage(int, Date, String, String) may expose internal representation by storing an externally mutable object into ErrorMessage.timestamp<br/>
+                  <br/>
+                  <br/>In file ErrorMessage.java ErrorMessage.java,
+					
+						line 13 13<br/>In class com.example.tutorialws.exception.ErrorMessage<br/>In method new com.example.tutorialws.exception.ErrorMessage(int, Date, String, String)<br/>Field com.example.tutorialws.exception.ErrorMessage.timestamp<br/>Local variable named timestamp<br/>At ErrorMessage.java:[line 13]<br/>At ErrorMessage.java:[line 13]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>com.example.tutorialws.model.Comment.setTutorial(Tutorial) may expose internal representation by storing an externally mutable object into Comment.tutorial<br/>
+                  <br/>
+                  <br/>In file Comment.java Comment.java,
+					
+						line 44 44<br/>In class com.example.tutorialws.model.Comment<br/>In method com.example.tutorialws.model.Comment.setTutorial(Tutorial)<br/>Field com.example.tutorialws.model.Comment.tutorial<br/>Local variable named tutorial<br/>At Comment.java:[line 44]<br/>At Comment.java:[line 44]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>com.example.tutorialws.model.Tag.setTutorials(Set) may expose internal representation by storing an externally mutable object into Tag.tutorials<br/>
+                  <br/>
+                  <br/>In file Tag.java Tag.java,
+					
+						line 42 42<br/>In class com.example.tutorialws.model.Tag<br/>In method com.example.tutorialws.model.Tag.setTutorials(Set)<br/>Field com.example.tutorialws.model.Tag.tutorials<br/>Local variable named tutorials<br/>At Tag.java:[line 42]<br/>At Tag.java:[line 42]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0">
+            <td width="20%" valign="top">
+               <a href="#EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+            </td>
+            <td width="10%" valign="top">Medium</td>
+            <td width="70%">
+               <p>com.example.tutorialws.model.Tutorial.setTags(Set) may expose internal representation by storing an externally mutable object into Tutorial.tags<br/>
+                  <br/>
+                  <br/>In file Tutorial.java Tutorial.java,
+					
+						line 80 80<br/>In class com.example.tutorialws.model.Tutorial<br/>In method com.example.tutorialws.model.Tutorial.setTags(Set)<br/>Field com.example.tutorialws.model.Tutorial.tags<br/>Local variable named tags<br/>At Tutorial.java:[line 80]<br/>At Tutorial.java:[line 80]</p>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h1>
+         <a name="Details">Warning Types</a>
+      </h1>
+      <h2>
+         <a name="EI_EXPOSE_REP">May expose internal representation by returning reference to mutable object</a>
+      </h2>
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="EI_EXPOSE_REP2">May expose internal representation by incorporating reference to mutable object</a>
+      </h2>
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>
+         <a name="NP_NULL_ON_SOME_PATH">Possible null pointer dereference</a>
+      </h2>
+
+<p> There is a branch of statement that, <em>if executed,</em>  guarantees that
+a null value will be dereferenced, which
+would generate a <code>NullPointerException</code> when the code is executed.
+Of course, the problem might be that the branch or statement is infeasible and that
+the null pointer exception cannot ever be executed; deciding that is beyond the ability of SpotBugs.
+</p>
+
+    <p>
+         <br/>
+         <br/>
+      </p>
+   </body>
+</html>
